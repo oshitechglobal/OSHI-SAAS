@@ -75,7 +75,7 @@ export default function AuthPage() {
             </svg>
           </div>
           <span style={{ fontSize:18, fontWeight:800, color:'var(--text)', letterSpacing:'-0.3px' }}>
-            Orion<span style={{ color:'var(--lime)' }}>.</span>
+            Oshi<span style={{ color:'var(--lime)' }}>.</span>
           </span>
         </div>
 
@@ -87,7 +87,7 @@ export default function AuthPage() {
              'Reset password'}
           </h1>
           <p style={{ color:'var(--text3)', marginBottom:32, fontSize:14 }}>
-            {mode === 'login'  ? 'Sign in to your Orion workspace' :
+            {mode === 'login'  ? 'Sign in to your Oshi workspace' :
              mode === 'signup' ? 'Start your free trial — no card required' :
              'Enter your email and we\'ll send a reset link'}
           </p>
@@ -200,7 +200,7 @@ export default function AuthPage() {
             AI that understands your documents
           </h2>
           <p style={{ fontSize:14, color:'var(--text3)', lineHeight:1.7, marginBottom:36 }}>
-            Upload any document and ask questions in plain English. Orion extracts, analyzes, and explains your files instantly — powered by Google Gemini.
+            Upload any document and ask questions in plain English. Oshi extracts, analyzes, and explains your files instantly — powered by Google Gemini.
           </p>
 
           {/* Feature pills */}
