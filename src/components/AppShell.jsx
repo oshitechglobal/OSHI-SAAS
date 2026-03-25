@@ -54,7 +54,7 @@ export default function AppShell({ children }) {
           </div>
           {!collapsed && (
             <span style={{ fontSize:16, fontWeight:800, letterSpacing:'-0.3px', whiteSpace:'nowrap' }}>
-              Orion<span style={{ color:'var(--lime)' }}>.</span>
+              Oshi<span style={{ color:'var(--lime)' }}>.</span>
             </span>
           )}
           <button onClick={() => setCollapsed(c => !c)} style={{
