@@ -106,7 +106,7 @@ export default function SettingsPage() {
         <Section title="API Configuration">
           <div style={{ background:'var(--bg2)', border:'1px solid var(--border)', borderRadius:10, padding:'14px 16px' }}>
             <div style={{ fontSize:13, color:'var(--text3)', lineHeight:1.65, marginBottom:12 }}>
-              Orion uses <strong style={{ color:'var(--text)' }}>Google Gemini 1.5 Flash</strong> for document analysis. Your Gemini API key is configured in the <code style={{ fontFamily:'var(--mono)', fontSize:12, background:'var(--bg3)', padding:'1px 6px', borderRadius:4, color:'var(--lime)' }}>.env</code> file.
+              Oshi uses <strong style={{ color:'var(--text)' }}>Google Gemini 1.5 Flash</strong> for document analysis. Your Gemini API key is configured in the <code style={{ fontFamily:'var(--mono)', fontSize:12, background:'var(--bg3)', padding:'1px 6px', borderRadius:4, color:'var(--lime)' }}>.env</code> file.
             </div>
             <div style={{ fontFamily:'var(--mono)', fontSize:12, color:'var(--text3)', background:'var(--bg3)', padding:'10px 14px', borderRadius:8, border:'1px solid var(--border)' }}>
               VITE_GEMINI_API_KEY=your_key_here
