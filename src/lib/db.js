@@ -23,6 +23,10 @@ export async function createConversation(uid, fileId, fileName) {
     messageCount: 0, createdAt: serverTimestamp(), updatedAt: serverTimestamp(),
   })
 }
+export async function getConversation(convId) {
+  const snap = await getDoc(doc(db, 'conversations', convId))
+  return snap.exists() ? { id: snap.id, ...snap.data() } : null
+}
 export async function updateConversation(convId, data) {
   return updateDoc(doc(db, 'conversations', convId), { ...data, updatedAt: serverTimestamp() })
 }
@@ -31,11 +35,15 @@ export function subscribeToConversations(uid, callback) {
   return onSnapshot(q, snap => { callback(snap.docs.map(d => ({ id: d.id, ...d.data() }))) })
 }
 export async function addMessage(convId, role, content) {
-  const ref = await addDoc(collection(db, 'conversations', convId, 'messages'), { role, content, createdAt: serverTimestamp() })
+  await addDoc(collection(db, 'conversations', convId, 'messages'), { role, content, createdAt: serverTimestamp() })
   await updateConversation(convId, { lastMessage: content.slice(0, 120) })
-  return ref
 }
 export function subscribeToMessages(convId, callback) {
   const q = query(collection(db, 'conversations', convId, 'messages'), orderBy('createdAt', 'asc'))
   return onSnapshot(q, snap => { callback(snap.docs.map(d => ({ id: d.id, ...d.data() }))) })
+}
+export async function getMessages(convId) {
+  const q = query(collection(db, 'conversations', convId, 'messages'), orderBy('createdAt', 'asc'))
+  const snap = await getDocs(q)
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }))
 }
