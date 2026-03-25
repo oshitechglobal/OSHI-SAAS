@@ -25,7 +25,6 @@ const SUGGESTIONS = [
 
 export default function ChatPage() {
   const { fileId } = useParams()
-  const { user }   = useNavigate ? useParams() : {}
   const { user: authUser } = useAuth()
   const navigate   = useNavigate()
 
