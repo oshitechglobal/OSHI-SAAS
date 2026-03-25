@@ -5,8 +5,8 @@ export async function askGemini(userMessage, documentText = '', history = []) {
   if (!apiKey) throw new Error('VITE_GEMINI_API_KEY is not set')
 
   const systemPrompt = documentText
-    ? `You are Orion, an expert AI document analyst. The user has uploaded a document. Answer questions about it with precision, cite page/section references when possible, and be concise but thorough. Here is the document content:\n\n---\n${documentText}\n---`
-    : `You are Orion, an expert AI assistant. Help the user with their questions.`
+    ? `You are Oshi, an expert AI document analyst. The user has uploaded a document. Answer questions about it with precision, cite page/section references when possible, and be concise but thorough. Here is the document content:\n\n---\n${documentText}\n---`
+    : `You are Oshi, an expert AI assistant. Help the user with their questions.`
 
   const contents = []
   history.forEach(msg => {
