@@ -275,7 +275,7 @@ function WelcomeScreen({ file, onSuggest }) {
       <div>
         <h2 style={{ fontFamily:'var(--serif)', fontSize:24, marginBottom:8 }}>Ask anything about this file</h2>
         <p style={{ fontSize:14, color:'var(--text3)', maxWidth:380, lineHeight:1.65 }}>
-          Orion has processed <strong style={{ color:'var(--text)' }}>{file?.name}</strong> and is ready to answer questions, summarize content, or extract key information.
+          Oshi has processed <strong style={{ color:'var(--text)' }}>{file?.name}</strong> and is ready to answer questions, summarize content, or extract key information.
         </p>
       </div>
       <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, width:'100%', maxWidth:520 }}>
